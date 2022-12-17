@@ -5,11 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=iyusuf40/machine-learning-app
 
 # Step 2:  
 # Authenticate & tag
+docker tag proj $dockerpath
+docker login
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
